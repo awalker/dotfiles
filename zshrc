@@ -1,5 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+if [ -f ~/.zshrc_local_before ]; then
+  source ~/.zshrc_local_before
+fi
 export ANDROID_HOME=$HOME/adt
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home
 export PATH=$HOME/bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
@@ -32,7 +35,7 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -74,7 +77,6 @@ plugins=(
   git
   nvm
   dotenv
-  osx
   npm
 )
 
@@ -93,6 +95,8 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+#
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -114,3 +118,8 @@ if [ -f /Users/adam/.tnsrc ]; then
     source /Users/adam/.tnsrc 
 fi
 ###-tns-completion-end-###
+
+if [ -f ~/.zshrc_local ]; then
+  source ~/.zshrc_local
+fi
+
