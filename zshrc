@@ -8,7 +8,7 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home
 export PATH=$HOME/bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/adam/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -126,3 +126,9 @@ fi
 bindkey -v
 export KEYTIMEOUT=1
 
+
+###-tns-completion-start-###
+if [ -f /home/adam/.tnsrc ]; then 
+    source /home/adam/.tnsrc 
+fi
+###-tns-completion-end-###

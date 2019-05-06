@@ -3,10 +3,11 @@
 if [[ $(uname) == 'Darwin' ]]; then
   font_dir="/Library/Fonts"
 else
-  font_dir="$HOME/Library/Fonts"
+  font_dir="$HOME/.fonts"
+  mkdir -p $font_dir
 fi
 # Put it all together into the find command we want
-find_command="find ./fonts \\( \\( -name '*.[o,t]tf' -or -name '*.pcf.gz' \\) \\) -type f -print0"
+find_command="find $HOME/dotfiles/fonts \\( \\( -name '*.[o,t]tf' -or -name '*.pcf.gz' \\) \\) -type f -print0"
 
 # Find all the font files and store in array
 files=()
@@ -17,6 +18,6 @@ done < <(eval "$find_command")
 ln -sfv "${files[@]}" "$font_dir"
 
 if [[ -n $(which fc-cache) ]]; then
-  fc-cache -vf "$font_dir"
+  sudo fc-cache -vf "$font_dir"
 fi
 

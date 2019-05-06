@@ -5,7 +5,7 @@ set encoding=utf8
 "set guifont=Hack\ Nerd\ Font\ Regular:h14
 
 " Custom python install
-let g:python3_host_prog = '/usr/local/bin/python3'
+" let g:python3_host_prog = '/usr/local/bin/python3'
 
 let g:startify_bookmarks = [ {'m': '~/Documents/Source/mellowedout'}, '~/Documents/Source/Henkel', '~/.zshrc' ]
 

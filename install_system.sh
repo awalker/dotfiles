@@ -5,14 +5,14 @@ if [[ $(uname) == 'Darwin' ]]; then
   ./install-mac.sh
 else
   # Linux
+  echo 'Installing for ubuntu'
   ./install-linux.sh
 fi
 
-./install-font.sh
+./install-fonts.sh
 
 # Install global npm packages
 npm install -g @angular/cli cordova firebase-tools nativescript neovim npm prettier semver typescript vtop
 
-
 # Install python packages (mostly for neovim)
-# FIXME: maybe later
+pip3 install pynvim

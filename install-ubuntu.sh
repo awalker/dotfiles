@@ -1,16 +1,21 @@
 #!/usr/bin/env bash
 
-sudo apt-get install -y software-properties-common git-core curl build-essential openssl libssl-dev snapd
+sudo apt-get install -y software-properties-common git curl build-essential openssl libssl-dev snapd
 
 # install nvm if we don't have it
-if [[ -f ~/.nvm ]];
+if [[ -d ~/.nvm ]];
 then
+  echo 'nvm is already installed'
+else
+  mkdir -p ~/.nvm
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 fi
 
 # install the latest node if we don't have node at all
-if [[ -n $(which apt-get)  ]];
+if [[ -n $(which node)  ]];
 then
+  echo "node is already installed"
+else
   nvm install node
 fi
 
@@ -32,7 +37,7 @@ sudo apt-get install -y terminator
 # steam
 
 # Snaps
-sudo snap install -y gitkraken spotify
+# sudo snap install -y gitkraken spotify
 
 # NeoVim alts
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
