@@ -122,4 +122,7 @@ fi
 if [ -f ~/.zshrc_local ]; then
   source ~/.zshrc_local
 fi
+# Vim mode line editing
+bindkey -v
+export KEYTIMEOUT=1
 
