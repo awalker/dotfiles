@@ -28,7 +28,8 @@ sudo apt-get update
 sudo apt-get install -y python-dev python-pip python3-dev python3-pip nodejs neovim
 
 # GUI
-sudo apt-get install -y terminator steam
+sudo apt-get install -y terminator 
+# steam
 
 # Snaps
 sudo snap install -y gitkraken spotify
