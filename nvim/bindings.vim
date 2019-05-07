@@ -6,7 +6,10 @@ map <leader>f :ALEFix<CR>
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 map <F7> mzgg=G`z
-nnoremap <C-P> :CtrlPBuffer<CR>
+nnoremap <Leader>pb :CtrlPBuffer<CR>
+nnoremap <Leader>pq :CtrlPQuickfix<CR>
+nnoremap <Leader>pl :CtrlPQuickfix<CR>
+nnoremap <Leader>pm :CtrlPMixed<CR>
 
 " MISC Settings
 "
@@ -36,3 +39,9 @@ nnoremap <Space>c1 :colorscheme colorsbox-material<CR>
 nnoremap <Space>c2 :colorscheme duotone-darkforest<CR>
 nnoremap <Space>c3 :colorscheme nova<CR>
 
+" Fugitive
+nnoremap <Space>gs :Gstatus<CR>
+nnoremap <Space>gp :Gpush<CR>
+nnoremap <Space>gu :Gpull<CR>
+nnoremap <Space>gw :Gwrite<CR>
+nnoremap <Space>gq :Gwq<CR>
