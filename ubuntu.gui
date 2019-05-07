@@ -1,0 +1,2 @@
+- shell:
+    - sudo apt-get install -y teminator
