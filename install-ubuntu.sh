@@ -20,9 +20,13 @@ else
 fi
 
 # Add all the PPAs we need
-sudo add-apt-repository multiverse
-sudo add-apt-repository ppa:gnome-terminator
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository -y multiverse
+if [[ ! -f /etc/apt/sources.list.d/gnome-terminator-ubuntu-ppa-disco.list ]]; then
+  sudo add-apt-repository -y ppa:gnome-terminator
+fi
+if [[ ! -f /etc/apt/sources.list.d/neovim-ppa-ubuntu-stable-disco.list ]]; then
+  sudo add-apt-repository -y ppa:neovim-ppa/stable
+fi
 
 # Update apt cache
 sudo apt-get update
@@ -41,10 +45,10 @@ sudo apt-get install -y terminator
 
 # NeoVim alts
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
-sudo update-alternatives --config vi
+# sudo update-alternatives --config vi
 sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
-sudo update-alternatives --config vim
+# sudo update-alternatives --config vim
 sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
-sudo update-alternatives --config editor
+# sudo update-alternatives --config editor
 
 
