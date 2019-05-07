@@ -7,9 +7,9 @@ Adam Walker's dotfiles.
 
 ### Mac
 
-- [  ] get iTerm settings
-- [  ] search for other apps that need installed
-- [  ] Install rvm/ruby (2.2.2?) and gems needed for nativescript
+- [ ] get iTerm settings
+- [ ] search for other apps that need installed
+- [ ] Install rvm/ruby (2.2.2?) and gems needed for nativescript
 
 ### Linux
 
