@@ -12,7 +12,6 @@ fi
 
 brew tap caskroom/cask
 brew tap caskroom/versions
-
 brew install git
 brew install wget
 brew install node

@@ -4,10 +4,17 @@
 set encoding=utf8
 "set guifont=Hack\ Nerd\ Font\ Regular:h14
 
-" Custom python install
-" let g:python3_host_prog = '/usr/local/bin/python3'
+" Function to source only if file exists {
+function! SourceIfExists(file)
+  if filereadable(expand(a:file))
+    exe 'source' a:file
+  endif
+endfunction
+" }
 
-let g:startify_bookmarks = [ {'m': '~/Documents/Source/mellowedout'}, '~/Documents/Source/Henkel', '~/.zshrc' ]
+call SourceIfExists( "$HOME/.config/nvim/init_local_pre.vim" )
+
+" let g:startify_bookmarks = [ {'m': '~/Documents/Source/mellowedout'}, '~/Documents/Source/Henkel', '~/.zshrc' ]
 
 source $HOME/.config/nvim/config/plugins.vim
 source $HOME/.config/nvim/config/basics.vim
@@ -42,3 +49,4 @@ let g:ale_linters = {'typescript': ['prettier', 'tslint', 'tsserver', 'typecheck
 let g:ctrlp_extensions = ['quickfix']
 
 
+call SourceIfExists( "$HOME/.config/nvim/init_local_post.vim" )

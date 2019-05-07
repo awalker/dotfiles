@@ -1,7 +1,7 @@
 - defaults:
     link:
-      relink: true
-      create: true
+        relink: true
+        create: true
 
 - clean: []
 
@@ -20,6 +20,8 @@
     # the following have to run after linking ~/.gitconfig
     - git submodule update --init --recursive
     - mkdir -p ~/.vim/plugged
-    - chsh -s /bin/zsh
-      #- ./install_system.sh
+    -
+        command: if [[ $SHELL != "/bin/zsh" ]]; then chsh -s /bin/zsh; fi
+        description: Setting default shell...
+        stdin: true
     # - >
