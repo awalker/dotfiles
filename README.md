@@ -15,6 +15,8 @@ Adam Walker's dotfiles.
 
 - Gather settings for gui apps
 - Install google-chrome(?)
+- Setup for Android dev
+- Setup nativescript for iOS cloud builds(?)
 
 ### Windows
 
