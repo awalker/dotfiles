@@ -11,19 +11,22 @@
 
 - shell: 
     -
-        command: if [[ $SHELL != "/bin/zsh" ]]; then chsh -s /bin/zsh; fi
         description: Installing Home Brew
+        command: >
+            if [[ -n $(which brew) ]];
+            then
+              # Got brew
+              echo "Brew Already Installed"
+            else
+              # install home brew
+              /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+            fi
     - brew tap caskroom/cask
     - brew tap caskroom/versions
-    - brew install git
-    - brew install wget
-    - brew install node
-    - brew install nvm
-    - brew cask install dropbox
-    - brew cask install google-chrome
-    - brew cask install iterm2
-    - brew cask install spotify
-    - brew cask install alfred dash
+    - brew update
+    - brew install git wget node nvm neovim
+    - brew cask install dropbox google-chrome iterm2 spotify alfred dash
+    - nvm install node
 
     # Finder: show hidden files by default
     - defaults write com.apple.finder AppleShowAllFiles -bool true
@@ -39,8 +42,6 @@
     
     # Update App Store apps
     - sudo softwareupdate -i -a
-    # Update Homebrew (Cask) & packages
-    - brew update
     - brew upgrade
     # Update npm & packages
     - npm install npm -g
