@@ -1,7 +1,20 @@
 
 # Dotfiles
 
-Adam Walker's dotfiles.
+Adam Walker's dotfiles and MacOS and Linux (Pop!/Ubuntu). Uses [dotbot](https://git.io/dotbot), Oh-My-Zsh, and a few fonts from Nerd Fonts.
+
+## Install
+
+    git clone
+    ./install
+    
+**Note** last time I tried this on a bare install (Pop!) the submodules were not correctly linked. Maybe linked to the [clean] section.
+    
+### Profiles
+
+The system automaticaly picks a few profiles: default, mac/linux, and a common after. You can supply one or more profiles to install between the system profile and the 'after' profile. e.g.
+
+    ./install ubuntu.gui ubuntu.personal
 
 ## TODO
 
@@ -14,7 +27,6 @@ Adam Walker's dotfiles.
 ### Linux
 
 - Gather settings for gui apps
-- Install google-chrome(?)
 - Setup for Android dev
 - Setup nativescript for iOS cloud builds(?)
 
