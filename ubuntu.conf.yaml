@@ -42,13 +42,6 @@
             fi
     - sudo add-apt-repository -y multiverse
     -
-        description: add terminator ppa
-        command: >
-            sudo add-apt-repository -y multiverse
-            if [[ ! -f /etc/apt/sources.list.d/gnome-terminator-ubuntu-ppa-disco.list ]]; then
-              sudo add-apt-repository -y ppa:gnome-terminator
-            fi
-    -
         description: add neovim ppa
         command: >
             if [[ ! -f /etc/apt/sources.list.d/neovim-ppa-ubuntu-stable-disco.list ]]; then

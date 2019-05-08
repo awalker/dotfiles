@@ -12,7 +12,7 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 if [[ $(uname) == 'Darwin' ]]; then
   system="mac"
 else
-  system="linux"
+  system="ubuntu"
 fi
 
 cd "${BASEDIR}"
