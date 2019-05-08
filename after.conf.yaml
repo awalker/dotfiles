@@ -11,3 +11,5 @@
         description: "Install python packages (mostly for neovim)"
         command: pip3 install pynvim
     # - >
+    - nvim +PluginInstall +qall
+    - nvim +UpdateRemotePlugins +qall
