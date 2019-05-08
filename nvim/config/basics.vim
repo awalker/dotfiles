@@ -20,3 +20,4 @@ set nowrap
 " add yaml stuffs
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
 autocmd FileType yaml setlocal ts=4 sts=4 sw=4 expandtab
+set foldlevel=7
