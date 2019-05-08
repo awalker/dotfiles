@@ -5,7 +5,8 @@ Adam Walker's dotfiles and MacOS and Linux (Pop!/Ubuntu). Uses [dotbot](https://
 
 ## Install
 
-    git clone
+    git clone https://github.com/awalker/dotfiles
+    cd dotfiles
     ./install
     
 **Note** last time I tried this on a bare install (Pop!) the submodules were not correctly linked. Maybe linked to the [clean] section.
