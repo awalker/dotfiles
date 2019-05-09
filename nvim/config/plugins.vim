@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'flazz/vim-colorschemes'
 Plug 'mhinz/vim-startify'
-" Plug 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'Shougo/denite.nvim'

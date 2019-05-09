@@ -35,9 +35,14 @@ nnoremap <Space>ah :ALEHover<CR>
 let g:ale_sign_column_always = 1
 autocmd FileType javascript,typescript,json setlocal foldmarker={,}
 
-nnoremap <Space>c1 :colorscheme colorsbox-material<CR>
-nnoremap <Space>c2 :colorscheme duotone-darkforest<CR>
-nnoremap <Space>c3 :colorscheme nova<CR>
+nnoremap <Space>c1 :colorscheme nova<CR>
+nnoremap <Space>c2 :colorscheme vimbrains<CR>
+nnoremap <Space>c3 :colorscheme tender<CR>
+nnoremap <Space>c4 :colorscheme colorsbox-material<CR>
+nnoremap <Space>c5 :colorscheme duotone-darkforest<CR>
+nnoremap <Space>c6 :colorscheme neuromancer<CR>
+nnoremap <Space>c7 :colorscheme space-vim-dark<CR>
+" Set Colors name <space>c n, p, & r
 
 " Fugitive
 nnoremap <Space>gs :Gstatus<CR>

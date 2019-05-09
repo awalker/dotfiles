@@ -18,6 +18,7 @@ call SourceIfExists( "$HOME/.config/nvim/init_local_pre.vim" )
 
 source $HOME/.config/nvim/config/plugins.vim
 source $HOME/.config/nvim/config/basics.vim
+source $HOME/.config/nvim/config/abbr.vim
 source $HOME/.config/nvim/config/airline.vim
 source $HOME/.config/nvim/config/ag.vim
 source $HOME/.config/nvim/bindings.vim
