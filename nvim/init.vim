@@ -16,17 +16,24 @@ call SourceIfExists( "$HOME/.config/nvim/init_local_pre.vim" )
 
 " let g:startify_bookmarks = [ {'m': '~/Documents/Source/mellowedout'}, '~/Documents/Source/Henkel', '~/.zshrc' ]
 
-source $HOME/.config/nvim/config/plugins.vim
+if !exists('g:vscode')
+  source $HOME/.config/nvim/config/plugins.vim
+endif
 source $HOME/.config/nvim/config/basics.vim
 source $HOME/.config/nvim/config/abbr.vim
-source $HOME/.config/nvim/config/airline.vim
-source $HOME/.config/nvim/config/ag.vim
+
+if !exists('g:vscode')
+  source $HOME/.config/nvim/config/airline.vim
+  source $HOME/.config/nvim/config/ag.vim
+endif
 source $HOME/.config/nvim/bindings.vim
-source $HOME/.config/nvim/config/deoplete.vim
-source $HOME/.config/nvim/setcolors.vim
+" source $HOME/.config/nvim/config/deoplete.vim
+if !exists('g:vscode')
+  source $HOME/.config/nvim/setcolors.vim
+endif
 
 " SetColors all
-
+let g:lsc_auto_map = v:true
 
 " Theme
 syntax enable

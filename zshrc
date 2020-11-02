@@ -5,7 +5,10 @@ if [ -f ~/.zshrc_local_before ]; then
 fi
 export ANDROID_HOME=$HOME/adt
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home
-export PATH=$HOME/bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
+export PATH=/usr/local/opt/ruby/bin:$HOME/bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -35,7 +38,7 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="false"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -78,6 +81,7 @@ plugins=(
   nvm
   dotenv
   npm
+  rvm
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -114,8 +118,8 @@ export EDITOR='nvim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ###-tns-completion-start-###
-if [ -f /Users/adam/.tnsrc ]; then 
-    source /Users/adam/.tnsrc 
+if [ -f /Users/adam/.tnsrc ]; then
+  source /Users/adam/.tnsrc
 fi
 ###-tns-completion-end-###
 
@@ -126,9 +130,15 @@ fi
 bindkey -v
 export KEYTIMEOUT=1
 
-
 ###-tns-completion-start-###
-if [ -f /home/adam/.tnsrc ]; then 
-    source /home/adam/.tnsrc 
+if [ -f /home/adam/.tnsrc ]; then
+  source /home/adam/.tnsrc
 fi
 ###-tns-completion-end-###
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/adam/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/adam/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/adam/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/adam/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/sbin:$PATH"

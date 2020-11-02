@@ -21,3 +21,5 @@ set nowrap
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
 autocmd FileType yaml setlocal ts=4 sts=4 sw=4 expandtab
 set foldlevel=7
+
+autocmd FileType typescript setlocal foldmethod=syntax
