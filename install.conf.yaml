@@ -5,7 +5,7 @@
 
 - clean: []
 
-- link: 
+- link:
     ~/.zshrc: zshrc
     ~/.oh-my-zsh:
     ~/.oh-my-zsh/custom/themes/powerlevel9k: powerlevel9k
@@ -17,7 +17,7 @@
     ~/.git_template:
     ~/.ignore:
 
-- shell: 
+- shell:
     - git submodule sync --recursive
     # the following have to run after linking ~/.gitconfig
     - git submodule update --init --recursive
@@ -26,4 +26,7 @@
         command: if [[ $SHELL != "/bin/zsh" ]]; then chsh -s /bin/zsh; fi
         description: Setting default shell...
         stdin: true
+    -
+        command: curl https://getmic.ro | bash
+        description: Install micro editor
     # - >
