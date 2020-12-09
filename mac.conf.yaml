@@ -26,8 +26,9 @@
       # - brew tap caskroom/versions
     - brew update
     - brew install git wget node nvm neovim the_silver_searcher tmux glances ripgrep starship
-    - brew cask install dropbox google-chrome iterm2 spotify alfred dash dbeaver-community
+    - brew cask install visual-studio-code dropbox google-chrome iterm2 spotify alfred dash dbeaver-community
     - nvm install node
+    - ./check-vscode.sh
 
     # Finder: show hidden files by default
     - defaults write com.apple.finder AppleShowAllFiles -bool true

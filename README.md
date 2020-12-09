@@ -45,3 +45,5 @@ The system automatically picks a few profiles: default, mac/linux, and a common 
 To keep submodules at their proper versions, you could include something like git submodule update --init --recursive in your install.conf.yaml.
 
 To upgrade your submodules to their latest versions, you could periodically run git submodule update --init --remote.
+
+to update vscode extentions. code --list-extensions > vscodefile

@@ -11,3 +11,6 @@
                 sudo dpkg -i google-chrome-stable_current_amd64.deb
                 rm google-chrome-stable_current_amd64.deb
             fi
+    -
+        description: Install VS Code
+        command: sudo snap install --classic code && ./check-vscode.sh
