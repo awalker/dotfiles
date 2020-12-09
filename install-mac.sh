@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ -n $(which brew) ]];
-then
+if [[ -n $(which brew) ]]; then
   # Got brew
   echo "Brew Already Installed"
 else
@@ -16,12 +15,12 @@ brew install git
 brew install wget
 brew install node
 brew install nvm
+brew install fish
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install spotify
 brew cask install alfred dash
-
 
 # Finder: show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
@@ -34,7 +33,6 @@ defaults write com.apple.screencapture type -string “png”
 
 # TODO: Install rvm
 # TODO: Ensure ruby 2.2.2 is avaiable for nativescript projects
-
 
 # Update App Store apps
 sudo softwareupdate -i -a

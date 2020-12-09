@@ -27,6 +27,9 @@ fi
 if [[ ! -f /etc/apt/sources.list.d/neovim-ppa-ubuntu-stable-disco.list ]]; then
   sudo add-apt-repository -y ppa:neovim-ppa/stable
 fi
+if [[ ! -f /etc/apt/sources.list.d/fish-shell.list]]; then
+  sudo apt-add-repository ppa:fish-shell/release-3
+fi
 
 # Update apt cache
 sudo apt-get update
@@ -34,10 +37,10 @@ sudo apt-get update
 # Install fest
 # FIXME: Should probably breakout all the TUI from GUI programs
 # TUI
-sudo apt-get install -y python-dev python-pip python3-dev python3-pip nodejs neovim
+sudo apt-get install -y python-dev python-pip python3-dev python3-pip nodejs neovim fish
 
 # GUI
-sudo apt-get install -y terminator 
+# sudo apt-get install -y terminator
 # steam
 
 # Snaps

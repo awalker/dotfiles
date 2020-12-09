@@ -10,12 +10,13 @@
     ~/.oh-my-zsh:
     ~/.oh-my-zsh/custom/themes/powerlevel9k: powerlevel9k
     ~/.config/nvim: nvim
+    ~/.config/fish: fish
     ~/.gitignore_global:
     ~/.gitconfig.user:
     ~/.gitconfig:
     ~/.stCommitMsg:
     ~/.git_template:
-    ~/.ignore:
+    # ~/.ignore:
 
 - shell:
     - git submodule sync --recursive

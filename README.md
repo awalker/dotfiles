@@ -21,7 +21,7 @@ The system automatically picks a few profiles: default, mac/linux, and a common 
 - [ ] Link up starship config
 - [ ] Link up micro config
 - [ ] install VSCode (maybe?) and either link config or use VSCode's config sync (might still be in preview)
-- [ ] install fish and configs as an option
+- [x] install fish and configs as an option
 - [ ] track bash configs as well (with starship integration)
 
 ### Mac
