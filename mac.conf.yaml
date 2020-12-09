@@ -9,7 +9,8 @@
 
 - clean: []
 
-- shell: 
+- shell:
+    - xcode-select --install
     -
         description: Installing Home Brew
         command: >
@@ -21,10 +22,10 @@
               # install home brew
               /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
             fi
-    - brew tap caskroom/cask
+    - brew tap homebrew/cask
       # - brew tap caskroom/versions
     - brew update
-    - brew install git wget node nvm neovim the_silver_searcher tmux glances ripgrep
+    - brew install git wget node nvm neovim the_silver_searcher tmux glances ripgrep starship
     - brew cask install dropbox google-chrome iterm2 spotify alfred dash dbeaver-community
     - nvm install node
 
@@ -37,9 +38,6 @@
     # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
     - defaults write com.apple.screencapture type -string “png”
 
-    # TODO: Install rvm
-    # TODO: Ensure ruby 2.2.2 is avaiable for nativescript projects
-    
     # Update App Store apps
     - sudo softwareupdate -i -a
     - brew upgrade
