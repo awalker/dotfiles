@@ -8,8 +8,6 @@
 - link:
     ~/.zshrc: zshrc
     ~/.config/starship.toml: starship.toml
-    ~/.oh-my-zsh:
-    ~/.oh-my-zsh/custom/themes/powerlevel9k: powerlevel9k
     ~/.config/nvim: nvim
     ~/.config/fish: fish
     ~/.gitignore_global:
