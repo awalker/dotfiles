@@ -9,7 +9,7 @@
         command: ./install-fonts.sh
     -
         description: "Install global npm packages"
-        command: npm install -g @angular/cli @nativescript/schematics cordova firebase-tools nativescript neovim npm prettier semver typescript vtop
+        command: npm install -g @angular/cli firebase-tools neovim npm prettier semver typescript vtop
     -
         description: "Install python packages (mostly for neovim)"
         command: pip3 install pynvim
