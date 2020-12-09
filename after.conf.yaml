@@ -1,6 +1,9 @@
 - clean: []
 
-- shell: 
+- shell:
+    -
+        description: "Install starship prompt"
+        command: curl -fsSL https://starship.rs/install.sh | bash
     -
         description: "Installing fonts..."
         command: ./install-fonts.sh

@@ -3,7 +3,8 @@
 if [ -f ~/.zshrc_local_before ]; then
   source ~/.zshrc_local_before
 fi
-export ANDROID_HOME=$HOME/adt
+#export ANDROID_HOME=$HOME/adt
+export ANDROID_HOME=/Users/adam/Library/Android/sdk
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home
 export PATH=/usr/local/opt/ruby/bin:$HOME/bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
@@ -84,7 +85,8 @@ plugins=(
   rvm
 )
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
+
 
 # User configuration
 
@@ -142,3 +144,5 @@ if [ -f '/Users/adam/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/adam/googl
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/adam/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/adam/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/usr/local/sbin:$PATH"
+
+eval "$(starship init zsh)"
