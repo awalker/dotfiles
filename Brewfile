@@ -78,6 +78,7 @@ brew "zlib"
 brew "hacker1024/hacker1024/coretemp"
 brew "michaeleisel/zld/zld"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
+brew "fnm"
 cask "adoptopenjdk"
 cask "cakebrew"
 cask "dbeaver-community"

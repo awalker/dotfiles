@@ -85,7 +85,8 @@ plugins=(
   rvm
 )
 
-source ~/.zsh-nvm/zsh-nvm.plugin.zsh
+# source ~/.zsh-nvm/zsh-nvm.plugin.zsh
+eval "$(fnm env)"
 
 # source $ZSH/oh-my-zsh.sh
 

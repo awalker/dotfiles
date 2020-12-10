@@ -10,3 +10,5 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 
 set -gx ANDROID_HOME "/Users/adam/adt/"
 starship init fish | source
+
+fnm env | source
