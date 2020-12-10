@@ -22,8 +22,8 @@
     - git submodule sync --recursive
     # the following have to run after linking ~/.gitconfig
     - git submodule update --init --recursive
-    - git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
-    - source ~/.zsh-nvm/zsh-nvm.plugin.zsh
+    # - git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
+    # - source ~/.zsh-nvm/zsh-nvm.plugin.zsh
     - mkdir -p ~/.vim/plugged
     -
         command: if [[ $SHELL != "/bin/zsh" ]]; then chsh -s /bin/zsh; fi

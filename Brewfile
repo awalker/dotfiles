@@ -55,7 +55,6 @@ brew "neovim", args: ["HEAD"]
 brew "net-snmp"
 brew "nginx"
 brew "node", link: false
-brew "nvm"
 brew "portaudio"
 brew "pre-commit"
 brew "qemu"

@@ -3,20 +3,13 @@
 sudo apt-get install -y software-properties-common git curl build-essential openssl libssl-dev snapd
 
 # install nvm if we don't have it
-if [[ -d ~/.nvm ]];
-then
-  echo 'nvm is already installed'
-else
-  mkdir -p ~/.nvm
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-fi
 
 # install the latest node if we don't have node at all
 if [[ -n $(which node)  ]];
 then
   echo "node is already installed"
 else
-  nvm install node
+  fnm install node
 fi
 
 # Add all the PPAs we need
