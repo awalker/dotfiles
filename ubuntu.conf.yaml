@@ -28,6 +28,7 @@
             else
               fvm install node
             fi
+    - sudo add-apt-repository -y  universe
     - sudo add-apt-repository -y multiverse
     -
         description: add neovim ppa
@@ -36,7 +37,8 @@
               sudo add-apt-repository -y ppa:neovim-ppa/stable
             fi
     - sudo apt-get update
-    - sudo apt-get install -y python-dev python-pip python3-dev python3-pip nodejs neovim
+    - sudo apt-get install -y python-dev python-pip python3-dev python3-pip
+    - sudo apt install -y neovim fonts-firacode
     - sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
     - sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
     - sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60

@@ -1,4 +1,5 @@
 - shell:
+    - ./install-nerd-font.sh
     - sudo apt-get install -y terminator
     -
         description: Install Chrome
