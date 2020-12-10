@@ -1,17 +1,17 @@
 - shell:
     - ./install-nerd-font.sh
     - sudo apt-get install -y terminator
-    -
-        description: Install Chrome
-        stdout: true
-        stdin: true
-        stderr: true
-        command: >
-            if [[ ! -n $(which google-chrome) ]]; then
-                wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-                sudo dpkg -i google-chrome-stable_current_amd64.deb
-                rm google-chrome-stable_current_amd64.deb
-            fi
+    # -
+    #     description: Install Chrome
+    #     stdout: true
+    #     stdin: true
+    #     stderr: true
+    #     command: >
+    #         if [[ ! -n $(which google-chrome) ]]; then
+    #             wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    #             sudo dpkg -i google-chrome-stable_current_amd64.deb
+    #             rm google-chrome-stable_current_amd64.deb
+    #         fi
     -
         description: Install VS Code
         command: sudo snap install --classic code && ./check-vscode.sh

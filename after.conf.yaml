@@ -5,6 +5,9 @@
         description: "Install starship prompt"
         command: curl -fsSL https://starship.rs/install.sh | bash
     -
+        description: "Install Fast Node Manager"
+        command: curl -fsSL https://fnm.vercel.app/install | bash
+    -
         description: "Installing fonts..."
         command: ./install-fonts.sh
     -
