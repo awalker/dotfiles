@@ -9,18 +9,18 @@ else
   echo "Install brew"
 fi
 
-brew tap caskroom/cask
-brew tap caskroom/versions
-brew install git
-brew install wget
-brew install node
-brew install nvm
-brew install fish
-brew cask install dropbox
-brew cask install google-chrome
-brew cask install iterm2
-brew cask install spotify
-brew cask install alfred dash
+#brew tap caskroom/cask
+#brew tap caskroom/versions
+#brew install git
+#brew install wget
+#brew install node
+#brew install nvm
+#brew install fish
+#brew cask install dropbox
+#brew cask install google-chrome
+#brew cask install iterm2
+# brew cask install spotify
+# brew cask install alfred dash
 
 # Finder: show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
