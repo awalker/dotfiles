@@ -26,8 +26,6 @@
       # - brew tap caskroom/versions
     - brew update
     - brew bundle
-    - git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
-    - source ~/.zsh-nvm/zsh-nvm.plugin.zsh
     # - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
     # - brew install git wget node nvm neovim the_silver_searcher tmux glances ripgrep starship
     # - brew cask install visual-studio-code dropbox google-chrome iterm2 spotify alfred dash dbeaver-community
