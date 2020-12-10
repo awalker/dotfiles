@@ -26,7 +26,4 @@
         command: if [[ $SHELL != "/bin/zsh" ]]; then chsh -s /bin/zsh; fi
         description: Setting default shell...
         stdin: true
-    -
-        command: curl https://getmic.ro | bash
-        description: Install micro editor
     # - >

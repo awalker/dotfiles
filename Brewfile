@@ -71,6 +71,7 @@ brew "the_silver_searcher"
 brew "tmux"
 brew "uncrustify"
 brew "watchman"
+brew "micro"
 brew "wget"
 brew "xctool", args: ["HEAD"]
 brew "zlib"
