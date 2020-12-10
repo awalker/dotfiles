@@ -85,8 +85,9 @@ plugins=(
   rvm
 )
 
-# source $ZSH/oh-my-zsh.sh
+source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
