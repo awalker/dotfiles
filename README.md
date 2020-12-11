@@ -10,6 +10,8 @@ Adam Walker's dotfiles and MacOS and Linux (Pop!/Ubuntu). Uses [dotbot](https://
 
 **Note** last time I tried this on a bare install (Pop!) the submodules were not correctly linked. Maybe linked to the [clean] section.
 
+**Note** `install-nerd-font.sh` Just downloads the fonts to the fonts folder in dotfiles. The fonts have actually been checked into the repo here. `install-fonts.sh` installs them (linux/mac) in the `after.conf.yaml` section of the install.
+
 ### Profiles
 
 The system automatically picks a few profiles: default, mac/linux, and a common after. You can supply one or more profiles to install between the system profile and the 'after' profile. e.g.
@@ -18,11 +20,12 @@ The system automatically picks a few profiles: default, mac/linux, and a common 
 
 ## TODO
 
-- [ ] Link up starship config
+- [x] Link up starship config
 - [ ] Link up micro config
-- [ ] install VSCode (maybe?) and either link config or use VSCode's config sync (might still be in preview)
+- [x] install VSCode (maybe?) and either link config or use VSCode's config sync (might still be in preview)
 - [x] install fish and configs as an option
-- [ ] track bash configs as well (with starship integration)
+- [x] track bash configs as well (with starship integration)
+- [ ] Find a good cross-platform alt for Dash
 
 ### Mac
 
@@ -31,8 +34,10 @@ The system automatically picks a few profiles: default, mac/linux, and a common 
 
 ### Linux
 
-- Gather settings for gui apps
-- Setup for Android dev
+- [ ] Gather settings for gui apps
+- [ ] Setup for Android dev
+- [ ] Install micro (maybe?)
+- [ ] Maybe create an option for emulation
 
 ### Windows
 
