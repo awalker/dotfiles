@@ -3,7 +3,7 @@
 - shell:
     -
         description: "Install starship prompt"
-        command: curl -fsSL https://starship.rs/install.sh | bash
+        command: echo curl -fsSL https://starship.rs/install.sh | bash
     -
         description: "Install Fast Node Manager"
         command: curl -fsSL https://fnm.vercel.app/install | bash
