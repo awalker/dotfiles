@@ -38,6 +38,7 @@ The system automatically picks a few profiles: default, mac/linux, and a common 
 - [ ] Setup for Android dev
 - [ ] Install micro (maybe?)
 - [ ] Maybe create an option for emulation
+- [ ] Manjaro desn't have unzip installed so the fnm install fails
 
 ### Windows
 
