@@ -37,6 +37,6 @@
         description: "Install Fast Node Manager"
         command: >
             if  [ -z $(which fnm)]; then
-                curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
+                curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell --install-dir $HOME/.local/bin
             fi
     # - >
