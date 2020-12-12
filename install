@@ -22,8 +22,6 @@ else
     fi
   fi
 fi
-echo "$system"
-exit 0
 
 cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive

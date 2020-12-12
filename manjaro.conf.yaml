@@ -1,0 +1,10 @@
+- defaults:
+    link:
+        relink: true
+        create: true
+    shell:
+        stdout: true
+        stderr: true
+
+- shell:
+  - echo Manjaro
