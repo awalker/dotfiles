@@ -8,3 +8,5 @@
 
 - shell:
   - echo Manjaro
+  - pamac install --no-confirm albert
+  - source $HOME/.bashrc && fnm install 14
