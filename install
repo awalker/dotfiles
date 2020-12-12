@@ -9,11 +9,21 @@ DOTBOT_DIR="dotbot"
 
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-if [[ $(uname) == 'Darwin' ]]; then
+UNAME=$(uname)
+system="unknown"
+if [[ $UNAME == 'Darwin' ]]; then
   system="mac"
 else
-  system="ubuntu"
+  if [[ $UNAME == 'Linux' ]]; then
+    if [[ ! -z $(which apt) ]]; then
+      system="ubuntu"
+    else
+      system="manjaro"
+    fi
+  fi
 fi
+echo "$system"
+exit 0
 
 cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
@@ -21,5 +31,5 @@ git submodule update --init --recursive "${DOTBOT_DIR}"
 
 # "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
 for conf in ${DEFAULT_CONFIG_PREFIX} ${system} ${@} ${POST_CONFIG_PREFIX}; do
-    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${conf}${CONFIG_SUFFIX}"
+  "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${conf}${CONFIG_SUFFIX}"
 done
