@@ -18,7 +18,11 @@
     ~/.stCommitMsg:
 
 - shell:
-    - sudo apt-get install -y software-properties-common git curl build-essential openssl libssl-dev snapd
+    - sudo apt-get install -y zsh fish software-properties-common git curl build-essential openssl libssl-dev snapd
+    -
+        command: if [[ $SHELL != "/bin/fish" ]]; then chsh -s /bin/fish; fi
+        description: Setting default shell...
+        stdin: true
     -
         description: install node
         command: >

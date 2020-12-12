@@ -10,6 +10,10 @@
 - clean: []
 
 - shell:
+    -
+        command: if [[ $SHELL != "/bin/zsh" ]]; then chsh -s /bin/zsh; fi
+        description: Setting default shell...
+        stdin: true
     - xcode-select --install
     -
         description: Installing Home Brew
