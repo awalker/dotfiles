@@ -27,6 +27,7 @@
     # - git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
     # - source ~/.zsh-nvm/zsh-nvm.plugin.zsh
     - mkdir -p ~/.vim/plugged
+    - $(which pamac) && pacmac install --no-confirm unzip
     -
         description: "Install starship prompt"
         command: >
