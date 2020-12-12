@@ -30,7 +30,7 @@
             then
               echo "node is already installed"
             else
-              fnm install node
+              fnm install 14
             fi
     - sudo add-apt-repository -y  universe
     - sudo add-apt-repository -y multiverse

@@ -9,7 +9,7 @@ if [[ -n $(which node)  ]];
 then
   echo "node is already installed"
 else
-  fnm install node
+  fnm install 14
 fi
 
 # Add all the PPAs we need
