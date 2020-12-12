@@ -8,5 +8,6 @@
 
 - shell:
   - echo Manjaro
-  - pamac install --no-confirm albert xclip python-neovim neovim
+  - pamac install --no-confirm albert xclip python-neovim neovim fish
+  - chsh -s $(which fish)
   - source $HOME/.bashrc && fnm install 14
