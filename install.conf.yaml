@@ -27,7 +27,7 @@
     - mkdir -p ~/.vim/plugged
     -
         description: "Install starship prompt"
-        command: echo curl -fsSL https://starship.rs/install.sh | bash
+        command: curl -fsSL https://starship.rs/install.sh | bash -s -- -y
     -
         description: "Install Fast Node Manager"
         command: curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
