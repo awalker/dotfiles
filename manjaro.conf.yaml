@@ -8,5 +8,5 @@
 
 - shell:
   - echo Manjaro
-  - pamac install --no-confirm albert
+  - pamac install --no-confirm albert xclip python-neovim neovim
   - source $HOME/.bashrc && fnm install 14
