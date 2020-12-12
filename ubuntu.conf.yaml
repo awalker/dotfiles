@@ -35,7 +35,7 @@
     # - sudo snap install --edge nvim --classic
     - curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
     - chmod a+x nvim.appimage
-    - sudo mv nvim.appimage /usr/local/bin/nvim
+    - sudo ln -s $HOME/dotfiles/nvim.appimage /usr/local/bin/nvim
     - sudo update-alternatives --install /usr/bin/vi vi /usr/local/bin/nvim 60
     - sudo update-alternatives --install /usr/bin/vim vim /usr/local/bin/nvim 60
     - sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/nvim 60
