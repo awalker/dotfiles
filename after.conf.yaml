@@ -6,7 +6,7 @@
         command: echo curl -fsSL https://starship.rs/install.sh | bash
     -
         description: "Install Fast Node Manager"
-        command: curl -fsSL https://fnm.vercel.app/install | bash
+        command: curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
     -
         description: "Installing fonts..."
         command: ./install-fonts.sh
