@@ -7,7 +7,9 @@
 
 - link:
     ~/.zshrc: zshrc
-    ~/.bashrc: bashrc
+    ~/.bashrc:
+        path: bashrc
+        force: true
     ~/.config/starship.toml: starship.toml
     ~/.config/nvim: nvim
     ~/.config/fish: fish
@@ -27,8 +29,14 @@
     - mkdir -p ~/.vim/plugged
     -
         description: "Install starship prompt"
-        command: curl -fsSL https://starship.rs/install.sh | bash -s -- -y
+        command: >
+            if [ -z $(which starship) ]; then
+                curl -fsSL https://starship.rs/install.sh | bash -s -- -y
+            fi
     -
         description: "Install Fast Node Manager"
-        command: curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
+        command: >
+            if  [ -z $(which fnm)]; then
+                curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
+            fi
     # - >

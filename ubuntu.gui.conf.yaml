@@ -1,6 +1,6 @@
 - shell:
     - gsettings set org.gnome.desktop.background picture-uri file://$HOME/dotfiles/images/retro.png
-    - sudo apt-get install -y terminator
+    - sudo apt install -y terminator
     # -
     #     description: Install Chrome
     #     stdout: true
