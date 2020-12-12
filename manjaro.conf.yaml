@@ -11,3 +11,4 @@
   - pamac install --no-confirm albert xclip python-neovim neovim fish
   - sudo chsh -s $(which fish) $USER
   - source $HOME/.bashrc && fnm install 14
+  - sudo snap install --classic code
