@@ -2,6 +2,7 @@
     link:
         relink: true
         create: true
+        force: true
 
 - clean: []
 
@@ -27,7 +28,7 @@
     # - git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
     # - source ~/.zsh-nvm/zsh-nvm.plugin.zsh
     - mkdir -p ~/.vim/plugged
-    - $(which pamac) && pamac install --no-confirm unzip
+    - if [! -z $(which pamac ) ]; then pamac install --no-confirm unzip; fi
     -
         description: "Install starship prompt"
         command: >
