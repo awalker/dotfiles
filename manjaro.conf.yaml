@@ -11,6 +11,8 @@
   - pamac install --no-confirm albert xclip python-neovim neovim fish
   - sudo chsh -s $(which fish) $USER
   - source $HOME/.bashrc && fnm install 14
+  - sudo systemctl enable --now snapd.socket
+  - sudo ln -s /var/lib/snapd/snap /snap
   - sudo snap install --classic code
   - >
       qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
@@ -22,6 +24,6 @@
             d.currentConfigGroup = Array("Wallpaper",
                                          "org.kde.image",
                                          "General");
-            d.writeConfig("Image", "file://$HOME/dotfiles/images/retro.png")
+            d.writeConfig("Image", "file:///home/adam/dotfiles/images/retro.png")
         }}
         '
