@@ -8,7 +8,10 @@
 
 - shell:
   - echo Manjaro
-  - pamac install --no-confirm albert xclip python-neovim neovim fish
+    # TODO: setup AUR
+    # bunnyfetch may be in AUR
+  - pamac install --no-confirm xclip python-neovim neovim fish fortune-mod yay
+  - pamac install --no-confirm awesomewm leftwm
   - sudo chsh -s $(which fish) $USER
   - source $HOME/.bashrc && fnm install 14
   - sudo systemctl enable --now snapd.socket
