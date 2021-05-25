@@ -1,0 +1,284 @@
+# LeftWM config.toml
+# Adam Walker's settings
+
+# {{{ global config
+modkey = "Mod4"
+mousekey = "Mod4"
+workspaces = []
+# Tags: I don't really switch to defined spaces.
+tags = ["1爵", "2Code", "3Social", "4", "5", "6", "7", "8", "9"]
+layouts = ["MainAndVertStack", "MainAndHorizontalStack", "MainAndDeck", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMain", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
+disable_current_tag_swap = false
+# }}}
+
+# {{{ Window commands
+
+[[keybind]]
+command = "CloseWindow"
+modifier = ["modkey"]
+key = "q"
+
+[[keybind]]
+command = "SoftReload"
+modifier = ["modkey", "Control"]
+key = "r"
+
+[[keybind]]
+command = "MoveWindowUp"
+modifier = ["modkey", "Shift"]
+key = "Up"
+
+[[keybind]]
+command = "MoveWindowDown"
+modifier = ["modkey", "Shift"]
+key = "Down"
+
+[[keybind]]
+command = "MoveWindowTop"
+modifier = ["modkey"]
+key = "Return"
+
+[[keybind]]
+command = "FocusWindowUp"
+modifier = ["modkey"]
+key = "Up"
+
+[[keybind]]
+command = "FocusWindowDown"
+modifier = ["modkey"]
+key = "Down"
+# }}}
+
+# {{{ Workspace (Screens or screen parts)
+[[keybind]]
+command = "MoveToLastWorkspace"
+modifier = ["modkey", "Shift"]
+key = "w"
+
+[[keybind]]
+command = "FocusWorkspaceNext"
+modifier = ["modkey"]
+key = "Right"
+
+[[keybind]]
+command = "FocusWorkspacePrevious"
+modifier = ["modkey"]
+key = "Left"
+
+# }}}
+
+# {{{ Tag (spaces) switching
+
+[[keybind]]
+command = "SwapTags"
+modifier = ["modkey"]
+key = "w"
+
+[[keybind]]
+command = "NextLayout"
+modifier = ["modkey", "Control"]
+key = "Up"
+
+[[keybind]]
+command = "PreviousLayout"
+modifier = ["modkey", "Control"]
+key = "Down"
+
+# {{{ goto tag
+[[keybind]]
+command = "GotoTag"
+value = "1"
+modifier = ["modkey"]
+key = "1"
+
+[[keybind]]
+command = "GotoTag"
+value = "2"
+modifier = ["modkey"]
+key = "2"
+
+[[keybind]]
+command = "GotoTag"
+value = "3"
+modifier = ["modkey"]
+key = "3"
+
+[[keybind]]
+command = "GotoTag"
+value = "4"
+modifier = ["modkey"]
+key = "4"
+
+[[keybind]]
+command = "GotoTag"
+value = "5"
+modifier = ["modkey"]
+key = "5"
+
+[[keybind]]
+command = "GotoTag"
+value = "6"
+modifier = ["modkey"]
+key = "6"
+
+[[keybind]]
+command = "GotoTag"
+value = "7"
+modifier = ["modkey"]
+key = "7"
+
+[[keybind]]
+command = "GotoTag"
+value = "8"
+modifier = ["modkey"]
+key = "8"
+
+[[keybind]]
+command = "GotoTag"
+value = "9"
+modifier = ["modkey"]
+key = "9"
+# }}}
+
+# {{{ Move To Tag
+[[keybind]]
+command = "MoveToTag"
+value = "1"
+modifier = ["modkey", "Shift"]
+key = "1"
+
+[[keybind]]
+command = "MoveToTag"
+value = "2"
+modifier = ["modkey", "Shift"]
+key = "2"
+
+[[keybind]]
+command = "MoveToTag"
+value = "3"
+modifier = ["modkey", "Shift"]
+key = "3"
+
+[[keybind]]
+command = "MoveToTag"
+value = "4"
+modifier = ["modkey", "Shift"]
+key = "4"
+
+[[keybind]]
+command = "MoveToTag"
+value = "5"
+modifier = ["modkey", "Shift"]
+key = "5"
+
+[[keybind]]
+command = "MoveToTag"
+value = "6"
+modifier = ["modkey", "Shift"]
+key = "6"
+
+[[keybind]]
+command = "MoveToTag"
+value = "7"
+modifier = ["modkey", "Shift"]
+key = "7"
+
+[[keybind]]
+command = "MoveToTag"
+value = "8"
+modifier = ["modkey", "Shift"]
+key = "8"
+
+[[keybind]]
+command = "MoveToTag"
+value = "9"
+modifier = ["modkey", "Shift"]
+key = "9"
+# }}}
+# }}}
+
+# {{{ System 
+
+# [[keybind]]
+# command = "Execute"
+# value = "reboot"
+# modifier = ["modkey", "Shift"]
+# key = "r"
+
+[[keybind]]
+command = "Execute"
+value = "pkill leftwm"
+modifier = ["modkey", "Shift"]
+key = "x"
+
+[[keybind]]
+command = "Execute"
+value = "$HOME/.config/leftwm/randr.sh"
+modifier = ["modkey"]
+key = "m"
+
+[[keybind]]
+command = "Execute"
+# value = "slock"
+value = "$HOME/.config/leftwm/lock.sh"
+# value = "i3lock-fancy"
+
+## requires light-locker to be run at startup
+# value = "light-locker-command -l"
+
+modifier = ["modkey", "Control"]
+key = "l"
+
+# }}}
+
+# {{{ Media 
+
+[[keybind]]
+command = "Execute"
+value = "playerctl play-pause"
+modifier = ["modkey"]
+key = "p"
+
+[[keybind]]
+command = "Execute"
+value = "spotify"
+modifier = ["modkey", "Shift"]
+key = "p"
+
+# }}}
+
+# {{{ App Launching
+
+[[keybind]]
+command = "Execute"
+value = "$HOME/.config/leftwm/laucher.sh"
+modifier = ["modkey"]
+key = "r"
+
+[[keybind]]
+command = "Execute"
+value = "$HOME/.config/leftwm/style-switch.sh"
+modifier = ["modkey"]
+key = "space"
+
+[[keybind]]
+command = "Execute"
+value = "rofi -terminal alacritty --modi ssh -show ssh"
+modifier = ["modkey"]
+key = "s"
+
+[[keybind]]
+command = "Execute"
+value = "$HOME/.config/leftwm/spawnalacritty"
+modifier = ["modkey"]
+key = "x"
+
+[[keybind]]
+command = "Execute"
+value = "brave"
+modifier = ["modkey"]
+key = "b"
+
+# }}}
+
+# vim: foldmethod=marker
