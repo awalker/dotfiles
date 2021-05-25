@@ -13,5 +13,5 @@ unzip -u FiraCode.zip -d fonts
 echo "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip"
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
 unzip -u Hack.zip -d fonts
-# fc-cache -fv
+fc-cache -fv
 echo "done!"
