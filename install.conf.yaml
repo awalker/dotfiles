@@ -1,44 +1,15 @@
-- defaults:
-    link:
-        relink: true
-        create: true
-        force: true
-
-- clean: []
+- clean: ['~']
 
 - link:
+    ~/.profile: profile
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.bash_logout: bash_logout
+    ~/.gitconfig: gitconfig
+    ~/.ssh/config:
+        path: ssh/config
+        create: true
+    ~/.zshenv: zshenv
     ~/.zshrc: zshrc
-    ~/.bashrc:
-        path: bashrc
-        force: true
-    ~/.config/starship.toml: starship.toml
-    ~/.config/nvim: nvim
-    ~/.config/fish: fish
-    ~/.gitignore_global:
-    ~/.gitconfig.user:
-    ~/.gitconfig:
-    ~/.stCommitMsg:
-    ~/.git_template:
-    # ~/.ignore:
 
-- shell:
-    - git submodule sync --recursive
-    # the following have to run after linking ~/.gitconfig
-    - git submodule update --init --recursive
-    # - git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
-    # - source ~/.zsh-nvm/zsh-nvm.plugin.zsh
-    - mkdir -p ~/.vim/plugged
-    - if [! -z $(which pamac ) ]; then pamac install --no-confirm unzip; fi
-    -
-        description: "Install starship prompt"
-        command: >
-            if [ -z $(which starship) ]; then
-                curl -fsSL https://starship.rs/install.sh | bash -s -- -y
-            fi
-    -
-        description: "Install Fast Node Manager"
-        command: >
-            if  [ -z $(which fnm)]; then
-                curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell --install-dir $HOME/.local/bin
-            fi
-    # - >
+

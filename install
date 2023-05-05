@@ -2,32 +2,14 @@
 
 set -e
 
-DEFAULT_CONFIG_PREFIX="install"
-POST_CONFIG_PREFIX="after"
-CONFIG_SUFFIX=".conf.yaml"
+CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
 
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-UNAME=$(uname)
-system="unknown"
-if [[ $UNAME == 'Darwin' ]]; then
-  system="mac"
-else
-  if [[ $UNAME == 'Linux' ]]; then
-    if [[ ! -z $(which apt) ]]; then
-      system="ubuntu"
-    else
-      system="manjaro"
-    fi
-  fi
-fi
 
 cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-# "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
-for conf in ${DEFAULT_CONFIG_PREFIX} ${system} ${@} ${POST_CONFIG_PREFIX}; do
-  "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${conf}${CONFIG_SUFFIX}"
-done
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
