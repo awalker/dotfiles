@@ -1,0 +1,222 @@
+{
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar at the bottom of your screen
+  "height": 38, // Waybar height
+  // "width": 1366, // Waybar width
+  // Choose the order of the modules
+  "modules-left": [
+    "custom/menu",
+    "wlr/workspaces",
+    "custom/spotify"
+  ],
+  "modules-center": [
+    "hyprland/submap",
+    "hyprland/window",
+    "custom/weather"
+  ],
+  "modules-right": [
+    // info
+    "cpu",
+    "memory",
+    //"battery", // -- This is a desktop
+    // connection
+    "network",
+    "bluetooth",
+    // System
+    "pulseaudio",
+    "idle_inhibitor",
+    // and the rest
+    "tray",
+    "clock"
+  ],
+  "wlr/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "on-click": "activate",
+    // "format": "{icon}",
+    // "format-icons": {
+    //   "1:web": "",
+    //   "2:code": "",
+    //   "3:term": "",
+    //   "4:work": "",
+    //   "5:music": "",
+    //   "6:docs": "",
+    //   "urgent": "",
+    //   "focused": "",
+    //   "default": ""
+    // }
+  },
+  "hyprland/submap": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "零",
+      "deactivated": "鈴"
+    },
+    "tooltip": true,
+    "tooltip-format-activated": "power-saving disabled",
+    "tooltip-format-deactivated": "power-saving enabled"
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+  "clock": {
+    "interval": 60,
+    "format": "{:%e %b %Y %H:%M}",
+    "format-alt": "{:%H:%M}"
+    // "format-alt": "{:%Y-%m-%d}"
+  },
+  "cpu": {
+    "interval": 5,
+    "states": {
+      "warning": 70,
+      "critical": 90
+    },
+    "format": "{usage}% ",
+    "on-click": "hyprctl dispatch exec \\$term_float htop"
+  },
+  "memory": {
+    "interval": 5,
+    "states": {
+      "warning": 70,
+      "critical": 90
+    },
+    "format": "{}% ",
+    "on-click": "hyprctl dispatch exec \\$term_float htop"
+  },
+  "battery": {
+    "bat": "BAT0",
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "network": {
+    "interval": 5,
+    // "interface": "wlp2s0", // (Optional) To force the use of this interface
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+    "format-disconnected": "Disconnected ⚠",
+    "tooltip-format": "{ifname} ({essid}): {ipaddr}",
+    "on-click": "hyprctl dispatch exec -- wezterm -e --class nmtui nmtui"
+  },
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "{icon} {volume}%{format_source}",
+    "format-muted": "婢 {format_source}",
+    "format-source": "",
+    "format-source-muted": " ",
+    "format-icons": {
+      "headphone": "",
+      "headset": "",
+      "default": [
+        "奄",
+        "奔",
+        "墳"
+      ]
+    },
+    "tooltip-format": "{icon} {volume}% {format_source}",
+    // "on-click": "hyprctl dispatch exec pavucontrol", // or launch pulsemixer in a term
+    "on-click": "hyprctl dispatch exec -- wezterm -e --class nmtui pulsemixer", // or launch pulsemixer in a term
+    "on-click-middle": "hyprctl dispatch exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-scroll-up": "hyprctl dispatch exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "hyprctl dispatch exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+  },
+  // "pulseaudio": {
+  //   //"scroll-step": 1,
+  //   "format": "{volume}% {icon}",
+  //   "format-bluetooth": "{volume}% {icon}",
+  //   "format-muted": "",
+  //   "format-icons": {
+  //     "headphones": "",
+  //     "handsfree": "",
+  //     "headset": "",
+  //     "phone": "",
+  //     "portable": "",
+  //     "car": "",
+  //     "default": [
+  //       "",
+  //       ""
+  //     ]
+  //   },
+  //   "on-click": "pavucontrol"
+  // },
+  "custom/spotify": {
+    "format": " {}",
+    "max-length": 40,
+    "interval": 30, // Remove this if your script is endless and write in loop
+    "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
+    "exec-if": "pgrep spotify"
+  },
+  "custom/menu": {
+    "format": "",
+    "on-click": "hyprctl dispatch exec \\$menu",
+    "tooltip": false
+  },
+  "custom/scratchpad": {
+    "interval": "once",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "one": "类",
+      "many": "缾"
+    },
+    "exec": "/bin/sh /usr/share/sway/scripts/scratchpad.sh",
+    "on-click": "swaymsg 'scratchpad show'",
+    "signal": 7
+  },
+  "custom/wf-recorder": {
+    "interval": "once",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip-format": "{tooltip}",
+    "exec": "echo '{\"class\": \"recording\",\"text\":\"雷\",\"tooltip\":\"press $mod+Esc to stop recording\"}'",
+    "exec-if": "pgrep wf-recorder",
+    "on-click": "killall -s SIGINT wf-recorder",
+    "signal": 8
+  },
+  "custom/weather": {
+    "icon-size": 42,
+    "format": "{icon} {}",
+    "tooltip": true,
+    "interval": 3600,
+    // accepts -c/--city <city> -t/--temperature <C/F> -d/--distance <km/miles>
+    "exec": "/usr/share/sway/scripts/weather.py -c Carrollton,GA",
+    "return-type": "json",
+    "format-icons": {
+      "Unknown": "",
+      "Cloudy": "摒",
+      "Fog": "",
+      "HeavyRain": "",
+      "HeavyShowers": "",
+      "HeavySnow": "",
+      "HeavySnowShowers": "ﰕ",
+      "LightRain": "",
+      "LightShowers": "",
+      "LightSleet": "",
+      "LightSleetShowers": "",
+      "LightSnow": "",
+      "LightSnowShowers": "ﭽ",
+      "PartlyCloudy": "",
+      "Sunny": "",
+      "ThunderyHeavyRain": "ﭼ",
+      "ThunderyShowers": "",
+      "ThunderySnowShowers": "",
+      "VeryCloudy": ""
+    }
+  }
+}

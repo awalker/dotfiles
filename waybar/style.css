@@ -1,0 +1,135 @@
+* {
+    border: none;
+    border-radius: 0;
+    /* font-family: "Cartograph CF Nerd Font"; */
+    font-family: "Hack Nerd Font";
+    font-size: 16px;
+    min-height: 0;
+}
+.icon {
+    font-size: 24px;
+}
+
+window#waybar {
+  /* // rgb(20,37,39) */
+    background: rgba(20,37,39,0.3);
+    color: rgba(255,255,255,0.7);
+}
+
+#window {
+    font-weight: bold;
+    /* font-family: "Ubuntu"; */
+}
+/*
+#workspaces {
+    padding: 0 5px;
+}
+*/
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: rgba(255,255,255,0.7);
+    border-top: 2px solid transparent;
+}
+
+#workspaces button.focused {
+    color: #74fd62;
+    border-top: 2px solid #74fd62;
+}
+
+#workspaces button.active {
+    color: #a6adc8;
+}
+
+#workspaces button.urgent {
+    color: #11111b;
+    background: #a6e3a1;
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    background: #11111b;
+    color: #cdd6f4;
+    border-radius: 10px;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid rgba(255,255,255,0.7);
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode, #custom-menu, #custom-weather, #idle_inhbitor {
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+#clock {
+    color: #fab387;
+    font-weight: bold;
+}
+
+#battery {
+}
+
+#battery icon {
+    color: red;
+}
+
+#battery.charging {
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    color: rgba(255,255,255,0.7);
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    color: rgb(255, 220, 200)
+}
+
+#memory {
+    color: #89b4fa;
+}
+
+#network {
+    color: #f9e2af;
+}
+
+#network.disconnected {
+    background: #f53c3c;
+}
+
+#pulseaudio {
+    color: #89b4fa;
+}
+
+#pulseaudio.muted {
+}
+
+#custom-spotify {
+    color: rgb(102, 220, 105);
+}
+
+#tray {
+}
+
+#custom-menu {
+    padding-left: 8px;
+    padding-right: 13px;
+    color: rgb(180,255, 190);
+    font-size: 24px;
+}
+
+
