@@ -1,5 +1,25 @@
 #!/usr/bin/env bash
 
+if ! command -v fish &>/dev/null; then
+	echo "ERR: Install fish"
+	exit 1
+fi
+
+if ! command -v syncthing &>/dev/null; then
+	echo "ERR: Install syncthing"
+	exit 1
+fi
+
+if ! command -v paru &>/dev/null; then
+	echo "ERR: Install paru"
+	exit 1
+fi
+
+if [! -d ./ssh]; then
+	echo "ERR: no ssh config present. use syncthing to transfer your ssh config"
+	exit 1
+fi
+
 set -e
 
 CONFIG="install.conf.yaml"

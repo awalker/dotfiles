@@ -27,3 +27,7 @@
         git submodule update --init --recursive,
         Installing submodules
       ]
+    - command: ./chfish.sh
+      description: Making fish the default shell
+      stdin: true
+      stdout: true
