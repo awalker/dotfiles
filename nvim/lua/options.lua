@@ -4,6 +4,7 @@
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.scrolloff = 8
 vim.wo.foldmethod = 'indent'
 -- vim.wo.foldmethod = 'nvim_treesitter#foldexpr()'
