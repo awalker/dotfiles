@@ -6,6 +6,10 @@ vim.opt.backup = false
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.scrolloff = 8
+
+-- autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+vim.opt.softtabstop = 2
+
 vim.wo.foldmethod = 'indent'
 -- vim.wo.foldmethod = 'nvim_treesitter#foldexpr()'
 vim.wo.foldenable = true
