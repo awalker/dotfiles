@@ -20,6 +20,7 @@
     ~/.config/hypr: hypr
     ~/.config/rofi: rofi
     ~/.config/fish: fish
+    ~/.config/starship.toml: starship.toml
 
 - shell:
     - [
