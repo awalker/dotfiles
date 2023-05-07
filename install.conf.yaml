@@ -1,28 +1,28 @@
 - defaults:
-      link:
-          relink: true
+    link:
+      relink: true
 
 - clean: [ '~' ]
 
 - link:
-      ~/.profile: profile
-      ~/.bash_profile: bash_profile
-      ~/.bashrc: bashrc
-      ~/.bash_logout: bash_logout
-      ~/.gitconfig: gitconfig
-      ~/.ssh/config:
-          path: ssh/config
-          create: true
-      ~/.zshenv: zshenv
-      ~/.zshrc: zshrc
-      ~/.config/nvim: nvim
-      ~/.config/waybar: waybar
-      ~/.config/hypr: hypr
-      ~/.config/rofi: rofi
-      ~/.config/fish: fish
+    ~/.profile: profile
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.bash_logout: bash_logout
+    ~/.gitconfig: gitconfig
+    ~/.ssh/config:
+      path: ssh/config
+      create: true
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
+    ~/.config/nvim: nvim
+    ~/.config/waybar: waybar
+    ~/.config/hypr: hypr
+    ~/.config/rofi: rofi
+    ~/.config/fish: fish
 
 - shell:
-      - [
-            git submodule update --init --recursive,
-            Installing submodules
-        ]
+    - [
+        git submodule update --init --recursive,
+        Installing submodules
+      ]
