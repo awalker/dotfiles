@@ -15,7 +15,7 @@ if ! command -v paru &>/dev/null; then
 	exit 1
 fi
 
-if [! -d ./ssh]; then
+if ! test -d ./ssh; then
 	echo "ERR: no ssh config present. use syncthing to transfer your ssh config"
 	exit 1
 fi

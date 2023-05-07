@@ -1,0 +1,18 @@
+#!/bin/fish
+sw.lua
+exit
+set wallpaper_path ~/wallpapers
+set rofi_opts -theme ~/.config/rofi/global/rofi.rasi
+
+set wp (exa $wallpaper_path | rofi $rofi_opts -dmenu)
+# set swww_opts --transition-step 20 --transition-fps 60 --transition-type center
+# set wipe_opts "left" "right" "top" "bottom" "wipe" "center" "simple"
+# set wipe_rnd (printf '%s\n' $wipe_opts | sort -R | head -n 1)
+set swww_opts --transition-step 20 --transition-fps 60 --transition-type random
+
+# if wp exists
+if test $status -eq 0
+    swww img $wallpaper_path/$wp $swww_opts
+else
+    swww clear 2E3440
+end

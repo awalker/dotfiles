@@ -21,6 +21,7 @@
     ~/.config/rofi: rofi
     ~/.config/fish: fish
     ~/.config/starship.toml: starship.toml
+    ~/.local/bin: bin
 
 - shell:
     - [
