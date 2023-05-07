@@ -1,3 +1,3 @@
 nvim/init_local*.vim
-Brewfile.lock.json
+ssh
 *.appimage
