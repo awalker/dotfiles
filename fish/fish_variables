@@ -5,10 +5,11 @@ SETUVAR --export SSH_AUTH_SOCK:\x1d
 SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_cd:z
 SETUVAR _fish_abbr_ls:exa\x20\x2d\x2dicons
-SETUVAR _fisher_TSFoster_2F_posix_2D_source_files:/home/adam/\x2econfig/fish/functions/posix\x2dsource\x2efish\x1e/home/adam/\x2econfig/fish/completions/posix\x2dsource\x2efish
-SETUVAR _fisher_danhper_2F_fish_2D_ssh_2D_agent_files:/home/adam/\x2econfig/fish/functions/__ssh_agent_is_started\x2efish\x1e/home/adam/\x2econfig/fish/functions/__ssh_agent_start\x2efish\x1e/home/adam/\x2econfig/fish/conf\x2ed/fish\x2dssh\x2dagent\x2efish
-SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/adam/\x2econfig/fish/functions/fisher\x2efish\x1e/home/adam/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_TSFoster_2F_posix_2D_source_files:/home/walke/\x2econfig/fish/functions/posix\x2dsource\x2efish\x1e/home/walke/\x2econfig/fish/completions/posix\x2dsource\x2efish
+SETUVAR _fisher_danhper_2F_fish_2D_ssh_2D_agent_files:/home/walke/\x2econfig/fish/functions/__ssh_agent_is_started\x2efish\x1e/home/walke/\x2econfig/fish/functions/__ssh_agent_start\x2efish\x1e/home/walke/\x2econfig/fish/conf\x2ed/fish\x2dssh\x2dagent\x2efish
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eTSFoster/posix\x2dsource\x1edanhper/fish\x2dssh\x2dagent
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:BD93F9
 SETUVAR fish_color_cancel:\x2d\x2dreverse
 SETUVAR fish_color_command:F8F8F2
