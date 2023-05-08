@@ -27,11 +27,14 @@ export ZEIT_DB=~/.config/zeit.db
 # disappearing cursors
 export WLR_NO_HARDWARE_CURSORS=1
 
-set -a; source $HOME/.config/user-dirs.dirs; set +a
+set -a
+source $HOME/.config/user-dirs.dirs
+set +a
 
 if [ -n "$(ls $HOME/.config/profile.d 2>/dev/null)" ]; then
 	for f in $HOME/.config/profile.d/*; do
 		source $f
 	done
 fi
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
