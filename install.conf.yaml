@@ -23,6 +23,8 @@
     ~/.config/starship.toml: starship.toml
     ~/.local/bin: bin
     ~/.wezterm.lua: wezterm.lua
+    ~/.config/swaylock: swaylock
+    ~/.config/wlogout: wlogout
 
 - shell:
     - [
