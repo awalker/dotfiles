@@ -25,6 +25,7 @@
     ~/.wezterm.lua: wezterm.lua
     ~/.config/swaylock: swaylock
     ~/.config/wlogout: wlogout
+    ~/.config/sway: sway
 
 - shell:
     - [

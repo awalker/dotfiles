@@ -1,0 +1,73 @@
+# Default config for sway
+#
+# Copy this to ~/.config/sway/config and edit it to your liking.
+#
+# Read `man 5 sway` for a complete reference.
+
+# styles - set the folder for your theme definition file
+#set $theme /usr/share/sway/themes/matcha-green
+
+# theme variables
+# include $theme/definitions
+include colorscheme
+set $color0  $base00
+set $color1  $base01
+set $color2  $base02
+set $color3  $base03
+set $color4  $base04
+set $color5  $base05
+set $color6  $base06
+set $color7  $base07
+set $color8  $base08
+set $color9  $base09
+set $color10 $base0A
+set $color11 $base0B
+set $color12 $base0C
+set $color13 $base0D
+set $color14 $base0E
+set $color15 $base0F
+# Basic color configuration using the Base16 variables for windows and borders.
+# Property Name         Border  BG      Text    Indicator Child Border
+client.focused          $base05 $base0D $base00 $base0B $base0B
+client.focused_inactive $base01 $base01 $base05 $base06 $base04
+client.unfocused        $base01 $base00 $base05 $base04 $base04
+client.urgent           $base08 $base08 $base00 $base0B $base08
+client.placeholder      $base00 $base00 $base05 $base03 $base03
+client.background       $base07
+
+# bar {
+#     colors {
+#     background $base00
+#     separator  $base01
+#     statusline $base04
+#
+#     # State             Border  BG      Text
+#     focused_workspace   $base05 $base0D $base00
+#     active_workspace    $base05 $base03 $base00
+#     inactive_workspace  $base03 $base01 $base05
+#     urgent_workspace    $base08 $base08 $base00
+#     binding_mode        $base00 $base0A $base00
+#   }
+# }
+
+
+# global variables
+include $HOME/.config/sway/definitions
+
+# user variables
+include $HOME/.config/sway/definitions.d/*.conf
+
+include /etc/sway/inputs/*
+include /etc/sway/outputs/*
+
+# enable modes
+include /etc/sway/modes/*
+
+# only enable this if every app you use is compatible with wayland
+# xwayland disable
+
+# include additional configs e.g. to autostart applications
+include /etc/sway/config.d/*
+
+# user config
+include $HOME/.config/sway/config.d/*.conf
