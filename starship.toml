@@ -1,6 +1,7 @@
 format = """
 [](#9A348E)\
 $username\
+$hostname\
 [](bg:#DA627D fg:#9A348E)\
 $directory\
 [](fg:#DA627D bg:#FCA17D)\
@@ -26,6 +27,10 @@ $time\
 
 # Disable the blank line at the start of the prompt
 # add_newline = false
+[hostname]
+ssh_only = false
+style= "bg:#9A348E"
+format = '[$ssh_symbol@$hostname]($style)'
 
 # You can also replace your username with a neat symbol like  to save some space
 [username]
