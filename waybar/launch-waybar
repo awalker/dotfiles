@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CF=$HOME/.config/waybar/hypr.jsonc
+CF=$HOME/.config/waybar/config.jsonc
 CONFIG_FILES="$CF $HOME/.config/waybar/style.css"
 
 trap "killall waybar" EXIT
