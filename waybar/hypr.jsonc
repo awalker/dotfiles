@@ -6,7 +6,6 @@
 	// Choose the order of the modules
 	"modules-left": [
 		"custom/menu",
-		"battery", // -- This is a desktop
 		"wlr/workspaces",
 		"custom/spotify"
 	],
@@ -19,7 +18,7 @@
 		// info
 		"cpu",
 		"memory",
-		"backlight",
+		//"battery", // -- This is a desktop
 		// connection
 		"network",
 		"bluetooth",
@@ -31,18 +30,6 @@
 		"tray",
 		"clock"
 	],
-	"backlight": {
-		"device": "amdgpu_bl0",
-		"format": "{icon} {percent}%",
-		"format-icons": [
-			"",
-			"",
-			""
-		],
-		"on-scroll-up": "brightnessctl set 1%+",
-		"on-scroll-down": "brightnessctl set 1%-",
-		"min-length": 6
-	},
 	"wlr/workspaces": {
 		"disable-scroll": true,
 		"all-outputs": false,
@@ -83,19 +70,6 @@
 		"format-alt": "{:%H:%M}"
 		// "format-alt": "{:%Y-%m-%d}"
 	},
-	"custom/pg": {
-		"interval": 30,
-		"exec": "echo $(systemctl is-active postgresql.service)",
-		"format": " {icon}",
-		"on-click": "systemctl start postgresql.service",
-		"on-click-right": "systemctl stop postgresql.service",
-		"format-icons": {
-			"active": "󰁡",
-			"inactive": "",
-			"": "what"
-		}
-		// signal ?
-	},
 	"cpu": {
 		"interval": 5,
 		"states": {
@@ -115,7 +89,7 @@
 		"on-click": "hyprctl dispatch exec \\$term_float htop"
 	},
 	"battery": {
-		// "bat": "Battery 0",
+		"bat": "BAT0",
 		"states": {
 			// "good": 95,
 			"warning": 30,
@@ -215,6 +189,19 @@
 		"exec-if": "pgrep wf-recorder",
 		"on-click": "killall -s SIGINT wf-recorder",
 		"signal": 8
+	},
+	"custom/pg": {
+		"interval": 30,
+		"exec": "echo $(systemctl is-active postgresql.service)",
+		"format": " {icon}",
+		"on-click": "systemctl start postgresql.service",
+		"on-click-right": "systemctl stop postgresql.service",
+		"format-icons": {
+			"active": "󰁡",
+			"inactive": "",
+			"": "what"
+		}
+		// signal ?
 	},
 	"custom/weather": {
 		"icon-size": 42,
