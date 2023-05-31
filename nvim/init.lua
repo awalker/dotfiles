@@ -40,7 +40,7 @@ require('lazy').setup({
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', opts = {} },
+      { 'j-hui/fidget.nvim',       opts = {} },
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
@@ -147,7 +147,7 @@ require('lazy').setup({
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',         opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', version = '*', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -377,7 +377,22 @@ local servers = {
   -- clangd = {},
   -- gopls = {},
   -- pyright = {},
-  rust_analyzer = {},
+  rust_analyzer = {
+    checkOnSave = {
+      command = 'cargo clippy',
+    },
+    check = {
+      command = 'cargo clippy',
+    },
+    ['rust-analyzer'] = {
+      checkOnSave = {
+        command = 'cargo clippy',
+      },
+      check = {
+        command = 'cargo clippy',
+      },
+    },
+  },
   -- tsserver = {},
 
   lua_ls = {
@@ -404,6 +419,16 @@ mason_lspconfig.setup {
 
 mason_lspconfig.setup_handlers {
   function(server_name)
+    vim.print(server_name)
+    vim.print(servers[server_name])
+    --[[
+    ['rust-analyzer'] = {
+    checkOkSave = {
+      command = 'clippy',
+    },
+  },
+
+    --]]
     require('lspconfig')[server_name].setup {
       capabilities = capabilities,
       on_attach = on_attach,
@@ -426,7 +451,7 @@ require('rust-tools').setup {
     on_attach = on_attach,
     settings = {
       ['rust-analyzer'] = {
-        checkOkSave = {
+        check = {
           command = 'clippy',
         },
       },
