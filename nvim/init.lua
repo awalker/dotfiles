@@ -123,11 +123,11 @@ require('lazy').setup({
         palettes = {
           all = {
             bg1 = 'none',
-            bg0 = 'none',
+            -- bg0 = 'none',
           },
         },
         options = {
-          transparent = true,
+          -- transparent = true,
         },
       }
       vim.cmd 'colorscheme nightfox'
