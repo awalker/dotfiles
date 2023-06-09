@@ -6,7 +6,7 @@ CONFIG_FILES="$CF $HOME/.config/waybar/style.css"
 trap "killall waybar" EXIT
 
 while true; do
-    waybar --config $CF &
-    inotifywait -e create,modify $CONFIG_FILES
-    killall waybar
+	hyper dispatch exec waybar --config $CF
+	inotifywait -e create,modify $CONFIG_FILES
+	killall waybar
 done
