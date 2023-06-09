@@ -2,6 +2,7 @@
 # make default editor Neovim
 export EDITOR=nvim
 export LC_MEASUREMENT=f
+export LC_ALL="en_US.UTF-8"
 
 # Most pure GTK3 apps use wayland by default, but some,
 # like Firefox, need the backend to be explicitely selected.
