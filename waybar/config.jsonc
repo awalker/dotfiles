@@ -189,6 +189,9 @@
 		"exec": "playerctl --follow metadata --format '{{ artist }} - {{ title }}'",
 		"exec-if": "pgrep spotify"
 	},
+	"bluetooth": {
+		"on-click": "hyprctl dispatch exec -- wezterm -e --class nmtui bluetuith"
+	},
 	"custom/menu": {
 		"format": "",
 		"on-click": "hyprctl dispatch exec \\$menu",
