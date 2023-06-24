@@ -419,8 +419,6 @@ mason_lspconfig.setup {
 
 mason_lspconfig.setup_handlers {
   function(server_name)
-    vim.print(server_name)
-    vim.print(servers[server_name])
     --[[
     ['rust-analyzer'] = {
     checkOkSave = {
