@@ -1,3 +1,5 @@
 nvim/init_local*.vim
 ssh
 *.appimage
+bin/pico8
+bin/pico8.dat

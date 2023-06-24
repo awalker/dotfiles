@@ -1,3 +1,5 @@
 [user]
 	email = adam.walker@virtualmindset.com
 	name = Adam Walker
+[init]
+	defaultBranch = main
