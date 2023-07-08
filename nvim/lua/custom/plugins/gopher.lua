@@ -1,6 +1,7 @@
 return {
   'olexsmir/gopher.nvim',
   ft = 'go',
+  lazy = true,
   config = function(_, opts)
     require('gopher').setup(opts)
   end,
