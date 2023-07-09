@@ -13,7 +13,7 @@ vim.opt.softtabstop = 2
 vim.wo.foldmethod = 'indent'
 -- vim.wo.foldmethod = 'nvim_treesitter#foldexpr()'
 vim.wo.foldenable = true
-vim.wo.foldlevel = 5
+vim.wo.foldlevel = 7
 
 -- Set highlight on search
 vim.o.hlsearch = false

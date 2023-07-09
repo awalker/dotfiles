@@ -40,7 +40,7 @@ require('lazy').setup({
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', opts = {} },
+      { 'j-hui/fidget.nvim',       tag = 'legacy', opts = {} },
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
@@ -130,8 +130,15 @@ require('lazy').setup({
           -- transparent = true,
         },
       }
-      vim.cmd 'colorscheme nightfox'
-      vim.cmd 'colorscheme nordfox'
+      -- vim.cmd 'colorscheme nightfox'
+      -- vim.cmd 'colorscheme nordfox'
+    end,
+  },
+
+  {
+    'catppuccin/nvim',
+    config = function()
+      vim.cmd 'colorscheme catppuccin'
     end,
   },
 
@@ -147,7 +154,7 @@ require('lazy').setup({
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',         opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', version = '*', dependencies = { 'nvim-lua/plenary.nvim' } },
