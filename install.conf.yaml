@@ -26,6 +26,7 @@
     ~/.config/swaylock: swaylock
     ~/.config/wlogout: wlogout
     ~/.config/sway: sway
+    ~/.config/dunst: dunst
 
 - shell:
     - [
