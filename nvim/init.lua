@@ -238,6 +238,8 @@ pcall(require('telescope').load_extension, 'fzf')
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader>b', require('telescope.builtin').buffers, { desc = 'Find existing [b]uffers' })
+vim.keymap.set('n', '<leader>j', require('telescope.builtin').jumplist, { desc = 'Find existing [j]umplist' })
+vim.keymap.set('n', '<leader>m', require('telescope.builtin').marks, { desc = 'Find existing [m]arks' })
 vim.keymap.set('n', '<leader>/', function()
   -- You can pass additional configuration to telescope to change theme, layout, etc.
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
@@ -369,6 +371,7 @@ local on_attach = function(client, bufnr)
   -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
   nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+  vim.keymap.set('n', '<leader>cf', vim.lsp.buf.format, { desc = 'Format Code' })
   if client.name == 'rust_analyzer' then
     -- vim.keymap.set("n", "K", "<CMD>RustHoverActions<CR>", { buffer = bufnr })
     vim.keymap.set('n', '<leader>ct', '<CMD>RustDebuggables<CR>', { buffer = bufnr, desc = 'Run Test' })
