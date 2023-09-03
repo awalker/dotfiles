@@ -20,6 +20,7 @@ $nim\
 $rust\
 [](fg:#86BBD8 bg:#06969A)\
 $docker_context\
+$jobs\
 [](fg:#06969A bg:#33658A)\
 $time\
 [ ](fg:#33658A)\
@@ -67,6 +68,11 @@ format = '[ $symbol ($version) ]($style)'
 symbol = " "
 style = "bg:#06969A"
 format = '[ $symbol $context ]($style) $path'
+
+[jobs]
+style = "bg:#06969A"
+symbol = " "
+format = '[ $symbol $number ]($style)'
 
 [elixir]
 symbol = " "
