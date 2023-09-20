@@ -3,3 +3,4 @@ ssh
 *.appimage
 bin/pico8
 bin/pico8.dat
+bin/godot
