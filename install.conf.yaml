@@ -27,6 +27,9 @@
     ~/.config/wlogout: wlogout
     ~/.config/sway: sway
     ~/.config/dunst: dunst
+    ~/.config/zellij: zellij
+    ~/.config/alacritty: alacritty
+    ~/.config/networkmanager-dmenu: networkmanager-dmenu
 
 - shell:
     - [
