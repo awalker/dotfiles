@@ -135,9 +135,9 @@
 	"network": {
 		"interval": 5,
 		// "interface": "wlp2s0", // (Optional) To force the use of this interface
-		"format-wifi": "{essid} ({signalStrength}%) ",
-		"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-		"format-disconnected": "Disconnected ⚠",
+		"format-wifi": "",
+		"format-ethernet": "",
+		"format-disconnected": "⚠",
 		"tooltip-format": "{ifname} ({essid}): {ipaddr}",
 		"on-click": "hyprctl dispatch exec -- wezterm -e --class nmtui nmtui"
 	},
