@@ -12,25 +12,36 @@
 	],
 	"modules-center": [
 		"hyprland/submap",
-		"hyprland/window",
-		"custom/weather"
+		"hyprland/window" //,
+		// "custom/weather"
 	],
 	"modules-right": [
 		// info
 		"cpu",
 		"memory",
-		"backlight",
+		"temperature",
+		// "backlight",
 		// connection
 		"network",
 		"bluetooth",
 		// System
 		"pulseaudio",
 		"idle_inhibitor",
-		"custom/pg",
+		// "custom/pg",
 		// and the rest
 		"tray",
 		"clock"
 	],
+	"hyprland/window": {
+		"format": "{}",
+		"rewrite": {
+			"(.*) — Mozilla Firefox": "  $1",
+			"Zellij (.*)": " $1",
+			"(.*) - Vivaldi": "  $1",
+			"(.*) - fish": "  [$1]"
+		},
+		"separate-outputs": true
+	},
 	"backlight": {
 		"device": "amdgpu_bl0",
 		"format": "{icon} {percent}%",
@@ -190,10 +201,11 @@
 		"exec-if": "pgrep spotify"
 	},
 	"bluetooth": {
-		"on-click": "hyprctl dispatch exec -- wezterm -e --class nmtui bluetuith"
+		"on-click": "hyprctl dispatch exec -- wezterm -e --class nmtui bluetuith",
+		"format": ""
 	},
 	"custom/menu": {
-		"format": "",
+		"format": "",
 		"on-click": "hyprctl dispatch exec \\$menu",
 		"tooltip": false
 	},
@@ -218,6 +230,14 @@
 		"exec-if": "pgrep wf-recorder",
 		"on-click": "killall -s SIGINT wf-recorder",
 		"signal": 8
+	},
+	"temperature": {
+		// "thermal-zone": 2,
+		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+		"critical-threshold": 80,
+		"format-critical": "{temperatureC}°C ",
+		// "format": "{temperatureC}°C "
+		"format": "{temperatureC}°C"
 	},
 	"custom/weather": {
 		"icon-size": 42,
