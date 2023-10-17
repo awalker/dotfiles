@@ -7,7 +7,7 @@
 	"modules-left": [
 		"custom/menu",
 		"battery", // -- This is a desktop
-		"hyprland/workspaces",
+		"wlr/workspaces",
 		"custom/spotify"
 	],
 	"modules-center": [
@@ -43,7 +43,7 @@
 		"on-scroll-down": "brightnessctl set 1%-",
 		"min-length": 6
 	},
-	"hyprland/workspaces": {
+	"wlr/workspaces": {
 		"disable-scroll": true,
 		"all-outputs": false,
 		"on-click": "activate"
