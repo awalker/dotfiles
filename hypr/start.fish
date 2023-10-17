@@ -12,7 +12,7 @@ wlsunset -l 33.9 -L -84.6 & #-S 6:30 -s 19:30
 
 # ~/.config/hypr/swayidle.fish
 ydotoold &
-nm-applet &
+nm-applet --indicator &
 
 # Bar
 waybar &
