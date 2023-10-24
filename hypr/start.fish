@@ -1,10 +1,14 @@
 #!/usr/bin/env fish
 
 # ~/.config/hypr/xdg-portal-hyprland &
-systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
-dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP --components=shh,secrets,pkcs11 --start --all &
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+systemctl --user start polkit-gnome-authentication-agent-1
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP --components=shh,secrets,pkcs11 --start --all
 systemctl --user import-environment QT_QPA_PLATFORMTHEME
-# /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+sleep 1
+1password --silent &
+
 
 wl-clipboard-history -t &
 dunst &
@@ -18,8 +22,8 @@ nm-applet --indicator &
 waybar &
 # eww open bar
 
-# exec systemctl --user import-environment && gnome-keyring-daemon --components=ssh\,secrets\,pkcs11 --start
-# exec dbus-update-activation-environment --all
+# systemctl --user import-environment && gnome-keyring-daemon --components=ssh\,secrets\,pkcs11 --start
+dbus-update-activation-environment --all
 #
 # Wallpaper
 sleep 2
