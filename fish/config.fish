@@ -24,5 +24,7 @@ if not pgrep --full ssh-agent | string collect >/dev/null
     set -Ux SSH_AUTH_SOCK $XDG_RUNTIME_DIR/gcr/ssh
 end
 
+set -g PAGER /run/current-system/sw/bin/bat
+
 # opam configuration
 #source /home/walke/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
