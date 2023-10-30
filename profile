@@ -19,7 +19,7 @@ export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # set default shell and terminal
-export SHELL=/bin/fish
+export SHELL=/run/current-system/sw/bin/fish
 export TERMINAL_COMMAND=/usr/share/sway/scripts/foot.sh
 
 # add default location for zeit.db
