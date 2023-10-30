@@ -27,4 +27,7 @@ dbus-update-activation-environment --all
 #
 # Wallpaper
 sleep 2
-swww init
+swww init &
+
+sleep 30
+spotifyd
