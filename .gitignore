@@ -5,3 +5,4 @@ bin/pico8
 bin/pico8.dat
 bin/godot
 fish/conf.old
+nvim/openai

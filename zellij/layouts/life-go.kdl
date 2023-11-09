@@ -10,6 +10,9 @@ layout {
 				plugin location="zellij:status-bar"
 			}
 	}
+	tab name="Explore" cwd=".." {
+		pane command="lf" borderless=true 
+	}
 	tab name="Go Code" cwd="../pb" {
 		pane command="nvim" borderless=true 
 	}

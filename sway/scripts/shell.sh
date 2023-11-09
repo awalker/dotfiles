@@ -9,7 +9,8 @@
 
 # foot -c "${USER_CONFIG:-"/usr/share/sway/templates/foot.ini"}" "$@" &
 # alacritty "$@" &
-alacritty
+#alacritty /home/walke/go/bin/zellijer
+alacritty -e zellijer
 #
 #/usr/bin/wezterm-gui start --cwd .
 #
