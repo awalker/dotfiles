@@ -11,7 +11,8 @@ sleep 1
 
 
 wl-clipboard-history -t &
-dunst &
+# dunst &
+swaync &
 wlsunset -l 33.9 -L -84.6 & #-S 6:30 -s 19:30
 
 # ~/.config/hypr/swayidle.fish
@@ -26,8 +27,8 @@ waybar &
 dbus-update-activation-environment --all
 #
 # Wallpaper
-sleep 2
+# sleep 2
 swww init &
 
-sleep 30
-spotifyd
+# sleep 30
+# spotifyd
