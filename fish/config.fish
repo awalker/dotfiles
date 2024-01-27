@@ -5,7 +5,7 @@ starship init fish | source
 #set -gx GOROOT "$HOME"
 set -gx PATH "$HOME/.local/bin" "$HOME/go/bin" $PATH
 # set -x GPG_TTY (tty)
-set -gx EDITOR nvim
+set -gx EDITOR hx
 
 # bun
 # set --export BUN_INSTALL "$HOME/.bun"

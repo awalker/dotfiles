@@ -5,4 +5,4 @@ swayidle -w \
     timeout 3600 'hyprctl dispatch dpms off' \
     resume 'hyprctl dispatch dpms on' \
     before-sleep 'playerctl pause' \
-    before-sleep 'exec $locking'
+    before-sleep 'exec swaylock --daemonize --ignore-empty-password'

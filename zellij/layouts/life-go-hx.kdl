@@ -1,0 +1,41 @@
+layout {
+	cwd "~/src/life-adp/pbsk/sk"
+	default_tab_template {
+		// the default zellij tab-bar and status bar plugins
+		pane size=1 borderless=true {
+			plugin location="zellij:tab-bar"
+		}
+		children
+			pane size=2 borderless=true {
+				plugin location="zellij:status-bar"
+			}
+	}
+	tab name="Explore" cwd=".." {
+		pane command="lf" borderless=true 
+	}
+	tab name="Go Code" cwd="../pb" {
+		pane command="hx" borderless=true 
+	}
+	tab name="Ts Code" {
+		pane command="hx" borderless=true 
+	}
+	tab name="Tasks" focus=true {
+		pane command="tasksh" borderless=true focus=true
+	}
+	tab name="Backend" {
+		pane name="Go" {
+			// command "rtx"
+			// args "ls"
+			command "/home/walke/.local/share/rtx/installs/nodejs/16.20.1/bin/npm" // "fish"
+			args "run" "dev:backend"
+		}
+		pane name="Node" {
+			command "/home/walke/.local/share/rtx/installs/nodejs/16.20.1/bin/npm" // "fish"
+			args "run" "dev"
+		}
+		pane name="tunto" {
+			command "fish"
+			args "-c" "tunto"
+		}
+	}
+}

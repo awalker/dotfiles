@@ -8,6 +8,13 @@ plugins {
     session-manager { path "session-manager"; }
 }
 
+keybinds {
+    unbind "Ctrl q"
+    // normal {
+    //     bind "Alt q" { Quit; }
+    // }
+}
+
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
 // eg. when terminal window with an active zellij session is closed
 // Options:
@@ -15,6 +22,8 @@ plugins {
 //   - quit
 //
 // on_force_close "quit"
+
+session_serialization true
 
 //  Send a request for a simplified ui (without arrow fonts) to plugins
 //  Options:

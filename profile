@@ -1,6 +1,6 @@
 #!/bin/sh
 # make default editor Neovim
-export EDITOR=nvim
+export EDITOR=hx
 export LC_MEASUREMENT=f
 export LC_ALL="en_US.UTF-8"
 
